@@ -1,0 +1,115 @@
+<html>
+
+<head>
+  <title>Welcome</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div style="margin:100px;"></div>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Welcome</a>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/packages/add">Add Package Details</a>
+        </li>
+        <li>
+          <a href="/packages">View Package Details</a>
+        </li>
+        <li>
+          <a href="/bookings">View Booking Details</a>
+        </li>
+        <li>
+          <a href="/contact">View User Details</a>
+        </li>
+        <li>
+          <a href="/user/login">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="jumbotron text-center">
+      <p>Add Tour packages</p>
+      <form action="/packages" method="post">
+
+        <div class="form-group">
+          <label>Package ID</label>
+          <input type="text" name="packageid">
+        </div>
+
+        <div class="form-group">
+          <label>Add Place</label>
+          <input type="text" class="form-group" name="placename">
+        </div>
+
+        <div class="form-group">
+          <label>Number Of Adults</label>
+          <input type="number" name="noofadults">
+        </div>
+        <div class="form-group">
+          <label>Number Of Children</label>
+          <input type="number" name="noofchildren">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" name="description">
+        </div>
+        <div class="form-group">
+          <label>Stay Amount</label>
+          <input type="number" name="stayamount">
+        </div>
+        <div class="form-group">
+          <label for="foodamount">Food Amount:</label>
+          <input type="text" name="foodamount">
+        </div>
+
+        <div class="form-group">
+          <label>Bus Amount:</label>
+          <input type="number" name="busamount">
+        </div>
+        <div class="form-group">
+          <label>Train Amount:</label>
+          <input type="number" name="trainamount">
+        </div>
+        <div class="form-group">
+          <label>Airlines Amount:</label>
+          <input type="number" name="airlinesamount">
+        </div>
+        <div class="form-group">
+          <label>No of Days</label>
+          <select id="dayList" name="noofdays">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+          </select>
+        
+       
+          <label>No of Nights</label>
+          <select id="nightList" name="noofnights">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

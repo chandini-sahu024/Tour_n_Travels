@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Welcome</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div style="margin:100px;"></div>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Welcome</a>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/packages">View Package Details</a>
+        </li>
+        <li>
+          <a href="/bookings">View Booking Details</a>
+        </li>
+        <li>
+          <a href="/users">View User Details</a>
+        </li>
+        <li>
+          <a href="/user/logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-sm-6 col-sm-offset-3">
+    <form action="/bookings" method="post">
+      <input type="text" size="80" name="location" placeholder="enter place name" >
+      <input type="submit" value="Search Packages" class="submitButton">
+    </form>
+    <div class="jumbotron text-center">
+      <p>View Tour packages</p>
+      <% for(var i = 0;i < packageList.length; i++){ %>
+      <a href='/packages/<%= packageList[i].packageId %>'> 
+      <div style="border-style: solid; padding: 5px; margin: 50px; max-width: 200px">
+        <h4 style="color: blue">Package Id: <%= packageList[i].packageId %></h4>
+        <h5 style="color: red">Place Name: <%= packageList[i].placeName %></h5>
+        <h5 style="color: red">No.of Days: <%= packageList[i].noofDays %></h5>
+        <h5 style="color: red">No.of Nights: <%= packageList[i].noofNights %></h5>
+      </div>
+      </a>
+      <% } %>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

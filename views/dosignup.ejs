@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Welcome</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div style="margin:100px;">
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Welcome</a>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About Us</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <a href="/user/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+      <!-- LOGIN FORM -->
+      <form action="/user/signup" method="post">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+      </form>
+
+      <hr>
+
+      <p>Already have an account? <a href="/user/login">Login</a></p>
+      <p>Or go <a href="/">home</a>.</p>
+
+      <div class="text-center">
+        <p>Made with Patience<a href="makemytrip.com"> Chandini Tour & Travel </a>.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
